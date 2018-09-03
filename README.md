@@ -6,7 +6,7 @@ An improvement over OneTab on sync, GUI, key shortcuts, and more!
 </p>
 
 # Planned features:
-[Send a request!](https://www.google.com "Send request!")
+[Send a request!](https://github.com/ArtDor2/noTab/issues/new "Send request!")
 
  - [ ] create icon, titlescreen
  - [ ] Dev blog, on GitHub pages, custom optimized for speed
