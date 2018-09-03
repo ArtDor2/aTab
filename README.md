@@ -1,11 +1,12 @@
-![noTab](https://github.com/ArtDor2/noTab/blob/master/assets/icons/icon128.png)
-# noTab
-An improvement over OneTab on sync, GUI, key shortcuts, and more!
+![noTab](https://github.com/ArtDor2/noTab/blob/master/assets/promotional/promotion1400x560.png)
 
 <p>
   <img src="https://img.shields.io/github/license/ArtDor2/noTab.svg?style=flat-square" alt="GitHub">
   <img src="https://img.shields.io/github/last-commit/ArtDor2/noTab.svg?style=flat-square" alt="GitHub last commit">
 </p>
+
+# noTab
+### An improvement over OneTab on sync, GUI, key shortcuts, and more!
 
 # Planned features:
 [Send a request!](https://github.com/ArtDor2/noTab/issues/new "Send request!")
