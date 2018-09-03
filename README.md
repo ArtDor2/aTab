@@ -12,7 +12,7 @@
 # Planned features:
 [Send a request!](https://github.com/ArtDor2/noTab/issues/new "Send request!")
 
- - [ ] create icon, titlescreen
+ - [x] create icon, titlescreen
  - [ ] Dev blog, on GitHub pages, custom optimized for speed
  - [ ] Storing tabs inside a database lokiJs
  - [ ] context menu: save tabs right, all, left, selected, current
