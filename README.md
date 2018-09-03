@@ -1,5 +1,7 @@
+![alt text](https://github.com/ArtDor2/noTab/blob/master/assets/icons/icon128.png)
 # noTab
 An improvement over OneTab on sync, GUI, key shortcuts, and more!
+
 <p>
   <img src="https://img.shields.io/github/license/ArtDor2/noTab.svg?style=flat-square" alt="GitHub">
   <img src="https://img.shields.io/github/last-commit/ArtDor2/noTab.svg?style=flat-square" alt="GitHub last commit">
