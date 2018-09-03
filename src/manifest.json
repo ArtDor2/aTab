@@ -6,11 +6,12 @@
     "description": "An improvement over OneTab on sync, GUI, key shortcuts, and more!",
     "author": "Artur Dorovskikh",
     "icons": {
-      "16": "assets/icons/icon.png",
-      "24": "assets/icons/icon.png",
-      "32": "assets/icons/icon.png",
-      "48": "assets/icons/icon.png",
-      "128": "assets/icons/icon.png"
+      "16": "assets/icons/icon16.png",
+      "19": "assets/icons/icon19.png",
+      "38": "assets/icons/icon38.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png",
+      "512": "assets/icons/icon512.png"
     },
     "background" : {
       "scripts": ["background.js"],
