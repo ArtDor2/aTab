@@ -1,4 +1,4 @@
-# ![alt text](https://github.com/ArtDor2/noTab/blob/master/assets/icons/a48.png "aTab") aTab
+![alt text](https://github.com/ArtDor2/noTab/blob/master/assets/icons/aTab512x220.png "aTab")
 ### An improvement over OneTab on sync, GUI, key shortcuts, and more!
 
 ![alt text](https://github.com/ArtDor2/noTab/blob/master/assets/promotional/promotion1400x560.png "noTab")
