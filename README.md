@@ -1,17 +1,17 @@
 ![alt text](https://github.com/ArtDor2/noTab/blob/master/assets/icons/aTab512_2.png "aTab")
-### An improvement over OneTab on sync, GUI, key shortcuts, and more!
+### aTab is a better version of OneTab to include sync, improved GUI, hotkeys, and more!
 
-![alt text](https://github.com/ArtDor2/noTab/blob/master/assets/promotional/promotion1400x560.png "noTab")
+![alt text](https://github.com/ArtDor2/aTab/blob/master/assets/promotional/promotion1400x560.png "noTab")
 
 <p>
-  <img src="https://img.shields.io/github/license/ArtDor2/noTab.svg?style=flat-square" alt="GitHub">
-  <img src="https://img.shields.io/github/last-commit/ArtDor2/noTab.svg?style=flat-square" alt="GitHub last commit">
+  <img src="https://img.shields.io/github/license/ArtDor2/aTab.svg?style=flat-square" alt="GitHub">
+  <img src="https://img.shields.io/github/last-commit/ArtDor2/aTab.svg?style=flat-square" alt="GitHub last commit">
 </p>
 
 # Planned features:
-[Send a request!](https://github.com/ArtDor2/noTab/issues/new "Send request!")
+[Send a request!](https://github.com/ArtDor2/aTab/issues/new "Send request!")
 
- - [x] create icon, titlescreen
+ - [x] icon, github planned features
  - [ ] Dev blog, on GitHub pages, custom optimized for speed
  - [ ] Storing tabs inside a database lokiJs
  - [ ] context menu: save tabs right, all, left, selected, current
@@ -23,12 +23,13 @@
 		- [ ] drag and drop re-ordering
  - [ ] keyboard shortcuts
 	- [ ] mappable
-	- [ ] in chrome settings can map keys
+	- [ ] in chrome settings functions can have mappable hotkeys
  - [ ] options screeen, opes with right click on icon
  
- - [ ] v1.0 publish on chrome web store
+ - [ ] v1.0 publish on chrome web store 
+ - [ ] introduction youtube video with voiceover and resolve edit
  
- - [ ] sync options [using storage.sync]
+ - [ ] sync options [using chrome storage.sync]
  - [ ] anonymous statistics for dev improvement
  - [ ] theme pick
  - [ ] localization translations
@@ -37,6 +38,7 @@
  - [ ] Paypal for donations
  - [ ] emojis in the context menu to improve recognizability
  - [ ] I18N support (only English currently)
+ 
  
 ### License
 
