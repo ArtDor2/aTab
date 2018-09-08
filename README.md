@@ -12,7 +12,6 @@
 [Send a request!](https://github.com/ArtDor2/aTab/issues/new "Send request!")
 
  - [x] icon, github planned features
- - [ ] Dev blog, on GitHub pages, custom optimized for speed
  - [ ] Storing tabs inside a database lokiJs
  - [ ] context menu: save tabs right, all, left, selected, current
  - [ ] tab list screen, clicking on icon opens tab list
@@ -29,7 +28,10 @@
  - [ ] v1.0 publish on chrome web store 
  - [ ] introduction youtube video with voiceover and resolve edit
  
- - [ ] sync options [using chrome storage.sync]
+ - [ ] popup when clicking on extension showing tab lists wihtout having to open a new tab
+ - [ ] drag / pin tabs to the right half sidebar for easy management
+
+- [ ] sync options [using chrome storage.sync]
  - [ ] anonymous statistics for dev improvement
  - [ ] theme pick
  - [ ] localization translations
@@ -39,6 +41,8 @@
  - [ ] emojis in the context menu to improve recognizability
  - [ ] I18N support (only English currently)
  
+ other:
+ - [ ] Dev blog, on GitHub pages, custom optimized for speed
  
 ### License
 
