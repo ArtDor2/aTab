@@ -31,7 +31,7 @@
  - [ ] popup when clicking on extension showing tab lists wihtout having to open a new tab
  - [ ] drag / pin tabs to the right half sidebar for easy management
 
-- [ ] sync options [using chrome storage.sync]
+ - [ ] sync options [using chrome storage.sync]
  - [ ] anonymous statistics for dev improvement
  - [ ] theme pick
  - [ ] localization translations
