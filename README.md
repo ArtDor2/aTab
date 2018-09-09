@@ -1,7 +1,5 @@
-![alt text](https://github.com/ArtDor2/noTab/blob/master/assets/icons/aTab512_2.png "aTab")
+# ![alt text](https://github.com/ArtDor2/noTab/blob/master/src/assets/icons/a48.png "aTab") aTab
 ### aTab is a better version of OneTab to include sync, improved GUI, hotkeys, and more!
-
-![alt text](https://github.com/ArtDor2/aTab/blob/master/assets/promotional/promotion1400x560.png "noTab")
 
 <p>
   <img src="https://img.shields.io/github/license/ArtDor2/aTab.svg?style=flat-square" alt="GitHub">
