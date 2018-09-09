@@ -1,66 +1,61 @@
 {
-    "manifest_version": 2,
-    "name": "noTab",
-    "version": "0.0.1",
-    "default_locale": "en",
-    "description": "An improvement over OneTab on sync, GUI, key shortcuts, and more!",
-    "author": "Artur Dorovskikh",
-    "icons": {
-      "16": "assets/icons/icon16.png",
-      "19": "assets/icons/icon19.png",
-      "38": "assets/icons/icon38.png",
-      "48": "assets/icons/icon48.png",
-      "128": "assets/icons/icon128.png",
-      "512": "assets/icons/icon512.png"
+  "manifest_version": 2,
+  "name": "aTab",
+  "version": "0.1.0",
+  "default_locale": "en",
+  "description": "Save tabs for later.",
+  "author": "Artur Dorovskikh",
+  "icons": {
+    "16": "assets/icons/a48_16.png",
+    "19": "assets/icons/a48_16.png",
+    "38": "assets/icons/a48.png",
+    "48": "assets/icons/a48.png",
+    "128": "assets/icons/icon128.png",
+    "512": "assets/icons/a512.png"
+  },
+  "background" : {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "commands": {
+    "store-current-or-selected-tabs": {
+      "description": "store_current_or_selected_tabs",
+      "global": true
     },
-    "background" : {
-      "scripts": ["background.js"],
-      "persistent": false
+    "store-right-tabs": {
+      "description": "store_right_tabs",
+      "global": true
     },
-    "commands": {
-      "store-right-tabs": {
-        "description": "store_right_tabs",
-        "global": true
-      },
-      "store-all-tabs": {
-        "description": "store_all_tabs",
-        "global": true
-      },
-      "store-left-tabs": {
-        "description": "store_left_tabs",
-        "global": true
-      },
-      "store-selected-tabs": {
-        "description": "store_selected_tabs",
-        "global": true
-      },
-      "open-tab-list": {
-        "description": "open_tab_list",
-        "global": true
-      },
-      "store-current-tabs": {
-        "description": "store_current_tabs",
-        "global": true
-      }
-
+    "store-all-tabs": {
+      "description": "store_all_tabs",
+      "global": true
     },
-    "browser_action": {
-      "default_title": "noTab",
-      "default_popup": "popup.html"
+    "store-left-tabs": {
+      "description": "store_left_tabs",
+      "global": true
     },
-    "permissions": [
-    "storage",
-    "contextMenus",
-    "tabs",
-    "history"
-     ],
-     "homepage_url": "https://github.com/ArtDor2/noTab",
-     "offline_enabled": true,
-     "options_page": "index.html#/app/options",
-     "options_ui":
-     {
-       "page": "index.html#/app/options",
-       "open_in_tab": true
-     },
-     "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com; object-src 'self'"
-  }
+    "open-tab-list": {
+      "description": "open_tab_list",
+      "global": true
+    }
+  },
+  "browser_action": {
+    "default_title": "aTab",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+  "storage",
+  "contextMenus",
+  "tabs",
+  "history"
+   ],
+   "homepage_url": "https://github.com/ArtDor2/aTab",
+   "offline_enabled": true,
+   "options_page": "options.html",
+   "options_ui":
+   {
+     "page": "options.html",
+     "open_in_tab": true
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com; object-src 'self'"
+}

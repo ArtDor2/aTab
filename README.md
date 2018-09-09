@@ -10,7 +10,7 @@
 [Send a request!](https://github.com/ArtDor2/aTab/issues/new "Send request!")
 
  - [x] icon, github planned features
- - [ ] Storing tabs inside a database lokiJs
+ - [ ] storing tabs inside a database lokiJs
  - [ ] context menu: save tabs right, all, left, selected, current
  - [ ] tab list screen, clicking on icon opens tab list
  	- [ ] pin tab list
