@@ -7,8 +7,6 @@
   "author": "Artur Dorovskikh",
   "icons": {
     "16": "assets/icons/a48_16.png",
-    "19": "assets/icons/a48_16.png",
-    "38": "assets/icons/a48.png",
     "48": "assets/icons/a48.png",
     "128": "assets/icons/icon128.png",
     "512": "assets/icons/a512.png"
