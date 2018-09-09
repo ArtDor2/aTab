@@ -2,13 +2,12 @@
   "manifest_version": 2,
   "name": "aTab",
   "version": "0.1.0",
-  "default_locale": "en",
   "description": "Save tabs for later.",
   "author": "Artur Dorovskikh",
   "icons": {
     "16": "assets/icons/a48_16.png",
     "48": "assets/icons/a48.png",
-    "128": "assets/icons/icon128.png",
+    "128": "assets/icons/a512.png",
     "512": "assets/icons/a512.png"
   },
   "background" : {
