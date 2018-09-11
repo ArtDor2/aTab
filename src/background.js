@@ -1,3 +1,5 @@
+var bkg = chrome.extension.getBackgroundPage();
+
 chrome.runtime.onInstalled.addListener(function() {
   var contexts = ["page","link"];
   // var contexts = ["page","selection","link","editable","image","video","audio"];
@@ -18,7 +20,11 @@ chrome.contextMenus.onClicked.addListener(function(clickFunction){
   }
   else if (clickFunction.menuItemId == "test3"){
     // chrome.tabs.create({url: "https://www.bing.com/"});
-    var tab1 = browser.tabs.query({highlighted: true, currentWindow: true})
+
+
+bkg.console.log('foo');
+
+    var tab1 = chrome.browser.tabs.query({highlighted: true, currentWindow: true})
     console.log(tab1)
   }
 });
