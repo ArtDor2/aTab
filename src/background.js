@@ -1,8 +1,7 @@
 var bkg = chrome.extension.getBackgroundPage();
 
 chrome.runtime.onInstalled.addListener(function() {
-  var contexts = ["page","link"];
-  // var contexts = ["page","selection","link","editable","image","video","audio"];
+  var contexts = ["page","link","image","video","audio"];
 
   chrome.contextMenus.create({"title": "Test 2", "contexts":contexts, "id": "test2"});
   chrome.contextMenus.create({"title": "Test 3", "contexts":contexts, "id": "test3"});
