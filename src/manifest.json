@@ -11,28 +11,31 @@
     "512": "assets/icons/a512.png"
   },
   "background" : {
-    "scripts": ["background.js"],
+    "scripts": [
+      "dexie.js",
+      "background.js"
+    ],
     "persistent": false
   },
   "commands": {
-    "store-current-or-selected-tabs": {
-      "description": "store_current_or_selected_tabs",
+    "store-selected": {
+      "description": "store_selected",
       "global": true
     },
-    "store-right-tabs": {
-      "description": "store_right_tabs",
+    "store-right": {
+      "description": "store_right",
       "global": true
     },
-    "store-all-tabs": {
-      "description": "store_all_tabs",
+    "store-all": {
+      "description": "store_all",
       "global": true
     },
-    "store-left-tabs": {
-      "description": "store_left_tabs",
+    "store-left": {
+      "description": "store_left",
       "global": true
     },
-    "open-tab-list": {
-      "description": "open_tab_list",
+    "open-list": {
+      "description": "open_list",
       "global": true
     }
   },
@@ -53,6 +56,5 @@
    {
      "page": "options.html",
      "open_in_tab": true
-   },
-   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com; object-src 'self'"
+   }
 }
