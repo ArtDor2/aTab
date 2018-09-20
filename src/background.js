@@ -31,21 +31,19 @@
 // });
 
 
-// working but cant rename
+// working but cant rename database
 var db = new Dexie("friend_database");
   db.version(1).stores({
       friends: 'id,name,number'
   });
 
-  // Put some data into it
   db.friends.put({id: 1, name: "tab1", number: 8}).then (function(){
-      // Then when data is stored, read from it
       return db.friends.get('tab1');
-  }).then(function (tabs_function) {
-      // Display the result
-      alert ("number " + tabs_function.number);
-      // alert ("id " + friend.id);
-  }).catch(function(error) {
+  })
+  .then(function (tabs_function) {
+    console.log("number " + tabs_function.number);
+  })
+  .catch(function(error) {
       console.log("Ooops: " + error);
   });
 
@@ -80,7 +78,7 @@ chrome.runtime.onInstalled.addListener(function() {
   chrome.contextMenus.create({"title": "open", "contexts":contexts, "id": "open"});
 });
 
-// functions for context menu
+// recieve functions from context menu
 chrome.contextMenus.onClicked.addListener(function(clickFunction){
   if (clickFunction.menuItemId == "selected") {store_selected()}
   else if (clickFunction.menuItemId == "right") {store_right()}
@@ -89,14 +87,40 @@ chrome.contextMenus.onClicked.addListener(function(clickFunction){
   else if (clickFunction.menuItemId == "open") {open_list()}
 });
 
+// recieve functions from popup
+chrome.extension.onMessage.addListener(
+  function(request, sender, sendResponse){
+      if(request.msg == "store_selected") store_selected();
+  }
+);
+
 // chrome keybindings to call tab functions
 chrome.commands.onCommand.addListener(function(command) {
-  console.log('Command:', command);
+  if (command === "store-selected"){
+    store_selected()
+  } else if (command === "store-right"){
+    store_right()
+  } else if (command === "store-all"){
+    store_all()
+  } else if (command === "store-left"){
+    store_left()
+  } else if (command === "open-list"){
+    open_list()
+  }
 });
 
+// function definitions
 function store_selected() {
-  var tab1 = chrome.browser.tabs.query({highlighted: true, currentWindow: true})
-  console.log(tab1)
+  chrome.tabs.create({url: "https://www.google.com/"});
+  // var tab1 = chrome.browser.tabs.query({highlighted: true, currentWindow: true})
+  // console.log(tab1)
+
+  // db.friends.put({name: "Nicolas2", shoeSize: 9}).then (function() {
+    //   return db.friends.get('Nicolas2');
+    // }).then(function (friend) {
+    //   alert ("Nicolas has shoe size " + friend.shoeSize);
+    //   console.log("Nicolas has shoe size " + friend.shoeSize);
+    // })
 }
 function store_right() {
   var tab1 = chrome.browser.tabs.query({highlighted: true, currentWindow: true})
@@ -114,12 +138,3 @@ function open_list() {
   var tab1 = chrome.browser.tabs.query({highlighted: true, currentWindow: true})
   console.log(tab1)
 }
-
-// db.friends.put({name: "Nicolas2", shoeSize: 9}).then (function() {
-    //   return db.friends.get('Nicolas2');
-    // }).then(function (friend) {
-    //   alert ("Nicolas has shoe size " + friend.shoeSize);
-    //   console.log("Nicolas has shoe size " + friend.shoeSize);
-    // })
-
-    // chrome.tabs.create({url: "https://www.google.com/"});
