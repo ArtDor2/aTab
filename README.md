@@ -1,5 +1,5 @@
 # ![alt text](https://github.com/ArtDor2/noTab/blob/master/src/assets/icons/a48.png "aTab") aTab
-### aTab is an improved in development version of OneTab including cloud sync, improved GUI, hotkeys, and more!
+### aTab is an improved in development version of OneTab including cloud sync, improved UX, hotkeys, and more!
 
 ## Planned Features: [Request a feature!](https://github.com/ArtDor2/aTab/issues/new "Send request!")
 
@@ -24,6 +24,8 @@
 - [ ] introduction YouTube video with voiceover, edit in Resolve
 <br/>v1.1.0
 - [ ] show tab lists POP-UP by clicking on icon
+- [ ] search for saved tabs in lists
+- [ ] search inside options
 <br/>v1.2.0
 - [ ] sync app settings [chrome storage.sync]
 - [ ] anonymous statistics for dev improvement
@@ -35,8 +37,7 @@
 <br/>v2.0.0
 - [ ] emojis in the context menu to improve recognizability
 - [ ] I18N support (only English currently)
-<br/>
-other:
+<br/>other:
 - [ ] Dev blog, on GitHub pages, custom optimized for speed
  
 

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "aTab",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Save tabs for later.",
   "author": "Artur Dorovskikh",
   "icons": {
@@ -12,7 +12,8 @@
   },
   "background" : {
     "scripts": [
-      "dexie.js",
+      "assets/scripts/dexie-2.0.4.js",
+      "assets/scripts/vue-2.5.17.js",
       "background.js"
     ],
     "persistent": false
@@ -20,23 +21,30 @@
   "commands": {
     "store-selected": {
       "description": "store_selected",
-      "global": true
+      "suggested_key": {
+        "windows": "Ctrl+Shift+Down"
+      }
     },
     "store-right": {
       "description": "store_right",
-      "global": true
+      "suggested_key": {
+        "windows": "Ctrl+Shift+Right"
+      }
     },
     "store-all": {
       "description": "store_all",
-      "global": true
+      "suggested_key": {
+        "windows": "Ctrl+Shift+Up"
+      }
     },
     "store-left": {
       "description": "store_left",
-      "global": true
+      "suggested_key": {
+        "windows": "Ctrl+Shift+Left"
+      }
     },
     "open-list": {
-      "description": "open_list",
-      "global": true
+      "description": "open_list"
     }
   },
   "browser_action": {
