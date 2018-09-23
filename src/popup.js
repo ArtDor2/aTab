@@ -12,4 +12,7 @@
 //     alert("stuff");
 //   });
 
-document.getElementById("clickMe").onclick = doFunction;
+function store_selected_popup() {
+  alert("sent message")
+  chrome.extension.sendMessage({msg: "store_selected"});
+}
