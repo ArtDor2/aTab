@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "aTab",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Save tabs for later.",
   "author": "Artur Dorovskikh",
   "icons": {
@@ -19,49 +19,65 @@
   },
   "commands": {
     "store-selected": {
-      "description": "store_selected",
-      "suggested_key": {
-        "windows": "Ctrl+Shift+Down"
-      }
+      "description": "Store selected tabs",
+      "suggested_key": {"windows": "Ctrl+Down"}
     },
     "store-right": {
-      "description": "store_right",
-      "suggested_key": {
-        "windows": "Ctrl+Shift+Right"
-      }
+      "description": "Store right tabs",
+      "suggested_key": {"windows": "Ctrl+Right"}
     },
     "store-all": {
-      "description": "store_all",
-      "suggested_key": {
-        "windows": "Ctrl+Shift+Up"
-      }
+      "description": "Store all tabs",
+      "suggested_key": {"windows": "Ctrl+Up"}
     },
     "store-left": {
-      "description": "store_left",
-      "suggested_key": {
-        "windows": "Ctrl+Shift+Left"
-      }
+      "description": "Store left tabs",
+      "suggested_key": {"windows": "Ctrl+Left"}
     },
     "open-list": {
-      "description": "open_list"
+      "description": "Open tabs list"
+    },
+    "store-all-windows": {
+      "description": "Store all tabs in all windows"
+    },
+    "store-unselected": {
+      "description": "Store all unselected tabs in current window"
+    },
+    "store-unselected-windows": {
+      "description": "Store all unselected tabs in all windows"
+    },
+    "help": {
+      "description": "Help"
+    },
+    "exclude": {
+      "description": "Exclude current site from saving"
     }
   },
   "browser_action": {
     "default_title": "aTab",
-    "default_popup": "popup.html"
+    "default_popup": "page/popup.html"
   },
   "permissions": [
   "storage",
   "contextMenus",
   "tabs",
-  "history"
+  "history",
+  "identity",
+  "notifications"
    ],
    "homepage_url": "https://github.com/ArtDor2/aTab",
+   "oauth2": {
+    "client_id": "__CLIENT_ID__",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive"
+    ]
+  },
    "offline_enabled": true,
-   "options_page": "options.html",
+   "options_page": "page/options.html",
    "options_ui":
    {
-     "page": "options.html",
+     "page": "page/options.html",
      "open_in_tab": true
-   }
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://apis.google.com __DEV_CSP__; object-src 'self'"
 }

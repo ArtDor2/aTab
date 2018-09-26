@@ -6,6 +6,7 @@
 - [x] icon, github planned features
 - [x] storing tabs inside a database IndexedDB using Dexie.js wrapper
 - [ ] context menu: save tabs right, all, left, selected, current
+	- [ ] show count of tabs to right/left/selecte/all
 <br/>v0.3.0
 - [ ] tab list screen, clicking on icon opens tab list
 - [ ] pin tab list
@@ -22,6 +23,7 @@
 <br/>v1.0.0
 - [ ] v1.0 publish to chrome web store 
 - [ ] introduction YouTube video with voiceover, edit in Resolve
+- [ ] github page gif demo of the app
 <br/>v1.1.0
 - [ ] show tab lists POP-UP by clicking on icon
 - [ ] search for saved tabs in lists
@@ -37,6 +39,7 @@
 <br/>v2.0.0
 - [ ] emojis in the context menu to improve recognizability
 - [ ] I18N support (only English currently)
+- [ ] publicly sharable list by keyword (for acces to lists without signing into google account)
 <br/>other:
 - [ ] Dev blog, on GitHub pages, custom optimized for speed
  

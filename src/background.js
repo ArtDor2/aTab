@@ -1,72 +1,50 @@
-// var db = new Dexie("tabs-list");
-// db.version(1).stores({
-//   // tabs: 'id,group,dateVisited,name,url,comment'
-//   tabs: 'name,number'
-// });
-// // db.version(1).stores({
-// //   groups: 'id,date,name,options'
-// // });
+var db = new Dexie('db_tabs');
+db.version(1).stores({
+    tabs: '++id, group, dateSaved, name, url'
+});
+db.open().then(function (db) {
+  console.log("Database opened successfully", db)
+}).catch (function (err) {
+    console.log("Error occurred", err)
+});
+
+db.tabs.put({id: 1, group: 1, dateSaved: 2018, name: "test", url: "www.tabtest.com"}).then (function(){
+        // return db.tabs.get('1');
+        console.log(db.tabs.get('test'));
+    })
+    // .then(function (tab) {
+    //   console.log("number " + tab.name);
+    // }).catch(function(error) {
+    //     console.log("Ooops: " + error);
+    // });
+
+db.transaction('r', db.users, function () {
+
+  // db.users.add({
+  //     name: "Zlatan",
+  //     username: "ibra",
+  //     email: [
+  //         "zlatan@ibrahimovic.se",
+  //         "zlatan.ibrahimovic@gmail.com"
+  //     ],
+  //     address: {
+  //         city: "Malmö",
+  //         country: "Sweden"
+  //     }
+  // });
+
+  db.users.where("group").startsWith("1")
+      // .or("address.city").anyOf (["Malmö", "Stockholm", "Barcelona"])
+      .each(function (tab) {
+          console.log("Found user: " + tab.name);
+      });
+
+}).catch (function (e) {
+  console.error(e.stack);
+});
 
 
-// // db.tabs.put({name: "Nicolas", comment: 8}).then (function() {
-// // db.tabs.put({id:1,group:1,dateVisited:1,name:'n',url:'u',comment:1}).then (function() {
-// db.tabs.put({name:"nick",number:10}).then (function() {
-//   //
-//   // Then when data is stored, read from it
-//   //
-//   return db.tabs.get('nick');
-// }).then(function (tabF) {
-//   //
-//   // Display the result
-//   //
-//   alert ("Nicolas has shoe size " + tabF.number);
-//   console.log("Nicolas has shoe size " + tabF.number);
-// }).catch(function(error) {
-//  //
-//  // Finally don't forget to catch any error
-//  // that could have happened anywhere in the
-//  // code blocks above.
-//  //
-//  alert ("Ooops: " + error);
-// });
-
-
-// working but cant rename database
-var db = new Dexie("friend_database");
-  db.version(1).stores({
-      friends: 'id,name,number'
-  });
-
-  db.friends.put({id: 1, name: "tab1", number: 8}).then (function(){
-      return db.friends.get('tab1');
-  })
-  .then(function (tabs_function) {
-    console.log("number " + tabs_function.number);
-  })
-  .catch(function(error) {
-      console.log("Ooops: " + error);
-  });
-
-// var db = new Dexie(YOUR_DB_NAME);
-// db.version(1).stores({
-//     tasks: "id,name,lastUpdated,taskListId,status", 
-//     taskLists: "id,name,lastUpdated"
-// });
-// db.open();
-
-// this.getTasksForList = function(taskListId) {
-//   var tasks = db.tasks.where('taskListId').equals(taskListId).sortBy('position');
-//   return tasks;
-// };
-// console.log(getTasksForList);
-
-// this.pushTaskList = function(taskList) {
-//   return db.taskLists.put(taskList);
-// };
-// // console.log(getTasksForList);
-
-
-// var bkg = chrome.extension.getBackgroundPage();  //?
+//? var bkg = chrome.extension.getBackgroundPage();  // what is this
 
 chrome.runtime.onInstalled.addListener(function() {
   var contexts = ["page","link","image","video","audio"];
@@ -87,7 +65,7 @@ chrome.contextMenus.onClicked.addListener(function(clickFunction){
   else if (clickFunction.menuItemId == "open") {open_list()}
 });
 
-// recieve functions from popup
+//? recieve functions from popup
 chrome.extension.onMessage.addListener(
   function(request, sender, sendResponse){
       if(request.msg == "store_selected") store_selected();
@@ -111,9 +89,10 @@ chrome.commands.onCommand.addListener(function(command) {
 
 // function definitions
 function store_selected() {
-  chrome.tabs.create({url: "https://www.google.com/"});
-  // var tab1 = chrome.browser.tabs.query({highlighted: true, currentWindow: true})
-  // console.log(tab1)
+  //? right clicking for context menu cancels selection of tabs
+
+  // chrome.tabs.create({url: "https://www.google.com/"});
+
 
   // db.friends.put({name: "Nicolas2", shoeSize: 9}).then (function() {
     //   return db.friends.get('Nicolas2');
@@ -121,20 +100,48 @@ function store_selected() {
     //   alert ("Nicolas has shoe size " + friend.shoeSize);
     //   console.log("Nicolas has shoe size " + friend.shoeSize);
     // })
+    
+    chrome.tabs.query({active: true, currentWindow: true}, function(tab) {
+      console.log(tab[0].url, tab[0].title);
+  });
+  // then close tabs
+  // chrome.tabs.remove(({active: true, currentWindow: true}));
 }
 function store_right() {
-  var tab1 = chrome.browser.tabs.query({highlighted: true, currentWindow: true})
-  console.log(tab1)
+  //? get index and save if after
+  chrome.tabs.query({currentWindow: true}, function(tabs) {
+    tabs.forEach(function(tab) {
+        console.log(tab.index, tab.title);
+    });
+});
 }
 function store_all() {
-  var tab1 = chrome.browser.tabs.query({highlighted: true, currentWindow: true})
-  console.log(tab1)
+  chrome.tabs.query({currentWindow: true}, function(tabs) {
+    tabs.forEach(function(tab) {
+        console.log(tab.index, tab.title);
+    });
+});
 }
 function store_left() {
-  var tab1 = chrome.browser.tabs.query({highlighted: true, currentWindow: true})
-  console.log(tab1)
+    //? get index and save if before
+    chrome.tabs.query({currentWindow: true}, function(tabs) {
+      tabs.forEach(function(tab) {
+          console.log(tab.index, tab.title);
+      });
+  });
 }
 function open_list() {
-  var tab1 = chrome.browser.tabs.query({highlighted: true, currentWindow: true})
-  console.log(tab1)
+  // chrome.tabs.create({ url: "page/options.html" });
+  chrome.tabs.create({ 'url': 'chrome://extensions/?options=' + chrome.runtime.id });
 }
+function store_all_windows() {
+  chrome.windows.getAll({populate:true},function(windows){
+    windows.forEach(function(window){
+      window.tabs.forEach(function(tab){
+        console.log(tab.url);
+      });
+    });
+  });
+}
+
+//? add other missing functions from commands
