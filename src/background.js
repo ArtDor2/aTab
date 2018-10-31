@@ -49,11 +49,14 @@ db.transaction('r', db.users, function () {
 chrome.runtime.onInstalled.addListener(function() {
   var contexts = ["page","link","image","video","audio"];
 
-  chrome.contextMenus.create({"title": "selected", "contexts":contexts, "id": "selected"});
-  chrome.contextMenus.create({"title": "right", "contexts":contexts, "id": "right"});
-  chrome.contextMenus.create({"title": "all", "contexts":contexts, "id": "all"});
-  chrome.contextMenus.create({"title": "left", "contexts":contexts, "id": "left"});
-  chrome.contextMenus.create({"title": "open", "contexts":contexts, "id": "open"});
+  chrome.contextMenus.create({"title": "👁 selected", "contexts":contexts, "id": "selected"});
+  chrome.contextMenus.create({"title": "👉 right", "contexts":contexts, "id": "right"});
+  chrome.contextMenus.create({"title": "❤ all", "contexts":contexts, "id": "all"});
+  chrome.contextMenus.create({"title": "👈 left", "contexts":contexts, "id": "left"});
+  chrome.contextMenus.create({"title": "🎁 open", "contexts":contexts, "id": "open"});
+  
+  // option for checkbox whether to save new tabs in new group or join into an existing one:
+  // chrome.contextMenus.create({"title": "make new group", "contexts":contexts, "id": "open"});
 });
 
 // recieve functions from context menu
