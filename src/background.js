@@ -55,6 +55,9 @@ chrome.runtime.onInstalled.addListener(function() {
   chrome.contextMenus.create({"title": "👈 left", "contexts":contexts, "id": "left"});
   chrome.contextMenus.create({"title": "🎁 open", "contexts":contexts, "id": "open"});
   
+  // PARENT LIST: save to recent or starred tab:
+  // chrome.contextMenus.create({"title": "save to group group", "contexts":contexts, "id": "open"});
+
   // option for checkbox whether to save new tabs in new group or join into an existing one:
   // chrome.contextMenus.create({"title": "make new group", "contexts":contexts, "id": "open"});
 });
