@@ -48,7 +48,7 @@ db.transaction('r', db.users, function () {
 
 chrome.runtime.onInstalled.addListener(function() {
   var contexts = ["page","link","image","video","audio"];
-
+// update
   chrome.contextMenus.create({"title": "👁 selected", "contexts":contexts, "id": "selected"});
   chrome.contextMenus.create({"title": "👉 right", "contexts":contexts, "id": "right"});
   chrome.contextMenus.create({"title": "❤ all", "contexts":contexts, "id": "all"});
