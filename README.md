@@ -5,7 +5,7 @@
 
 - [x] icon, github planned features
 - [x] storing tabs inside a database IndexedDB using Dexie.js wrapper
-- [ ] context menu: save tabs right, all, left, selected, current
+- [x] context menu: save tabs right, all, left, selected, current
 	- [ ] show count of tabs to right/left/selecte/all
 <br/>v0.3.0
 - [ ] tab list screen, clicking on icon opens tab list
