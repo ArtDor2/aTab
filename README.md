@@ -1,6 +1,9 @@
 # ![alt text](https://github.com/ArtDor2/noTab/blob/master/src/assets/icons/a48.png "aTab") aTab
 ### An improved in development version of OneTab including cloud sync, improved UX, hotkeys, and more!
 
+Mock-up:
+![Mock-up](https://github.com/ArtDor2/aTab/blob/master/2020-03-24%20aTab%20concept%20rough%20sketch%20v3.png)
+
 ## Planned Features: [Suggest a feature!](https://github.com/ArtDor2/aTab/issues/new "Send request!")
 
 - [x] icon, github planned features
